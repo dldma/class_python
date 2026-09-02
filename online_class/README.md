@@ -1,24 +1,60 @@
 # 온라인 Python 수업
 
-온라인 Python 수업 내용을 주차별로 정리합니다.
+온라인 수업에서 진행한 Python 실습 코드를 정리합니다.
 
-| 주차 | 바로가기 |
+---
+
+## Week 01 - k-최근접 이웃
+
+### 배운 내용
+
+- 머신러닝 기본 개념
+- 분류와 이진 분류
+- 도미와 빙어 데이터 시각화
+- `zip()`과 리스트 내포를 이용한 데이터 구성
+- 지도학습과 비지도학습
+- k-최근접 이웃 알고리즘
+- `fit()`, `score()`, `predict()`
+- `n_neighbors` 값에 따른 분류 결과 변화
+
+### 실습 코드
+
+[week01_knn.ipynb](./week01_knn.ipynb)
+
+도미 35마리와 빙어 14마리의 길이와 무게 데이터를 이용하여  
+`KNeighborsClassifier`로 생선을 분류하고 새로운 생선을 예측하는 실습을 진행했다.  
+또한 `n_neighbors=49`로 변경하여 이웃의 개수가 분류 결과에 미치는 영향을 확인했다.
+
+### 실습 결과
+
+#### 1. 도미 데이터 산점도
+
+도미의 길이와 무게의 관계를 산점도로 확인했다.
+
+![도미 산점도](./images/week01_knn_bream_scatter.png)
+
+#### 2. 도미와 빙어 데이터 비교
+
+도미와 빙어의 길이와 무게 데이터를 같은 산점도에 표시하여  
+두 데이터의 분포 차이를 확인했다.
+
+![도미와 빙어 산점도](./images/week01_knn_bream_smelt_scatter.png)
+
+#### 3. 새로운 생선 예측
+
+길이 30cm, 무게 600g인 새로운 생선을 산점도에 표시하고  
+k-최근접 이웃 모델을 이용하여 도미인지 빙어인지 예측했다.
+
+![새로운 생선 예측](./images/week01_knn_prediction_scatter.png)
+
+### 주요 함수
+
+| 함수 | 내용 |
 |---|---|
-| 1주차 | [Week 01](./week01/README.md) |
-| 2주차 | [Week 02](./week02/README.md) |
-| 3주차 | [Week 03](./week03/README.md) |
-| 4주차 | [Week 04](./week04/README.md) |
-| 5주차 | [Week 05](./week05/README.md) |
-| 6주차 | [Week 06](./week06/README.md) |
-| 7주차 | [Week 07](./week07/README.md) |
-| 8주차 | [Week 08](./week08/README.md) |
-| 9주차 | [Week 09](./week09/README.md) |
-| 10주차 | [Week 10](./week10/README.md) |
-| 11주차 | [Week 11](./week11/README.md) |
-| 12주차 | [Week 12](./week12/README.md) |
-| 13주차 | [Week 13](./week13/README.md) |
-| 14주차 | [Week 14](./week14/README.md) |
-| 15주차 | [Week 15](./week15/README.md) |
+| `plt.scatter()` | 산점도 출력 |
+| `KNeighborsClassifier()` | k-최근접 이웃 분류기 생성 |
+| `fit()` | 모델 학습 |
+| `score()` | 모델 성능 측정 |
+| `predict()` | 새로운 데이터 예측 |
 
-[메인으로 돌아가기](../README.md)
-EOF
+---
